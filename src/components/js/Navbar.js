@@ -23,9 +23,7 @@ const Navbar = () => {
           <li><a href="#contact" onClick={toggleMenu}>Contact</a></li>
         </ul>
       </div>
-      <a href="/resume.pdf" className="cv-btn" download>
-        Download CV
-      </a>
+      <a href={`${process.env.PUBLIC_URL}/resume.pdf`} className="cv-btn" download>Download CV</a>
     </nav>
   );
 };

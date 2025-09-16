@@ -36,7 +36,7 @@ const Hero = () => {
     }
 
     return () => clearTimeout(timer);
-  }, [text, isDeleting, wordIndex, words]); 
+  }, [text, isDeleting, wordIndex, words]);
 
   return (
     <>
@@ -49,7 +49,7 @@ const Hero = () => {
       <section id="home" className="hero">
         <div className="hero-left">
           <div className="image-container-hero">
-            <img src="/profile.png" alt="Hasnain Ali" className="profile-img" />
+            <img src={`${process.env.PUBLIC_URL}/profile.png`} alt="Hasnain Ali" className="profile-img" />
           </div>
         </div>
 
