@@ -1,0 +1,248 @@
+.skills-section {
+  background: var(--background-dark);
+  color: var(--text-light);
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  color: var(--text-light-secondary);
+  font-size: 1rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.skill-category {
+  background: #121f30;
+  padding: 25px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-category:hover {
+  background-color: rgba(0, 191, 255, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(30, 216, 253, 0.5);
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.category-header svg.category-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  margin-bottom: 20px;
+}
+
+.skills-list .skill-item {
+  background: #1a2b41;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.skills-list .skill-item:hover {
+  background-color: rgba(0, 191, 255, 0.15);
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.progress-bar {
+  background: #f1f0f0;
+  border-radius: 6px;
+  overflow: hidden;
+  height: 10px;
+  margin-bottom: 10px;
+}
+
+.progress {
+  height: 100%;
+  border-radius: 6px;
+  background-color: rgb(54, 84, 105);
+}
+
+.view-details-btn {
+  display: block;
+  margin: 15px auto 0 auto;
+  padding: 6px 15px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  background-color: rgb(24, 92, 141);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.view-details-btn:hover {
+  background-color: rgba(0, 191, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 50;
+}
+
+.skill-modal {
+  background: #1e1e1e;
+  padding: 35px 30px;
+  border-radius: 15px;
+  width: 450px;
+  max-width: 95%;
+  position: relative;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: rgb(24, 92, 141);
+  color: #fff;
+  border: none;
+  padding: 6px 15px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.close-modal:hover {
+  background-color: #007acc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.skill-level-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.level-bar {
+  background: #333;
+  flex: 1;
+  height: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.level-fill {
+  height: 100%;
+  border-radius: 6px;
+  background-color: rgb(33, 72, 100);
+}
+
+.skill-description {
+  margin-bottom: 15px;
+  line-height: 1.5;
+  color: var(--text-light-secondary);
+  white-space: pre-line;
+  text-align: justify;
+}
+
+.skill-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detail-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.detail-label {
+  width: 140px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.detail-value {
+  flex: 1;
+}
+
+.detail-value ul {
+  padding-left: 20px;
+  margin: 5px 0 0 0;
+  list-style: disc;
+  color: #cccccc;
+}
+
+.detail-value ul li {
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-modal {
+    width: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

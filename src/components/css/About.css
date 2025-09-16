@@ -1,0 +1,257 @@
+.about-section {
+  position: relative;
+  padding: 10px 10%;
+  background: transparent;
+  color: #f9f9f9;
+  z-index: 1;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #00bfff;
+  text-align: center;
+}
+
+.section-header p {
+  color: #aaaaaa;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.about-text {
+  flex: 1 1 400px;
+  margin: 0;
+  padding-left: 0; 
+  text-align: left; 
+}
+
+
+.about-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #18c5ff;
+}
+
+.justify-text {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #cccccc;
+  margin-bottom: 15px;
+}
+
+.about-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 12px; 
+  color: #cccccc;
+}
+.detail-item span strong{
+    color: #1dc7ff;
+
+}
+
+.detail-icon {
+  color: #67d3f7;
+  min-width: 24px; 
+}
+
+.about-image {
+  flex: 1 1 500px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  width: 100%;
+  max-width: 600px; 
+  height: auto; 
+  border-radius: 12px;
+  border: 2px solid #00bfff;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0, 191, 255, 0.2);
+}
+
+.stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  border-top: 2px solid rgba(238, 222, 222, 0.1);
+  padding-top: 20px;
+  margin-top: 60px;
+  width: 100%;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+  flex: 1;
+}
+
+.stat-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 80%;
+  background-color: rgba(112, 117, 137, 0.45);
+}
+
+.stat-item h3 {
+  font-size: 2rem;
+  color: #00BFFF;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.stat-item p {
+  font-size: 1rem;
+  color: #cccccc;
+  margin-top: 6px;
+}
+
+.timeline-container {
+  margin-top: 60px;
+}
+
+.timeline-container h3 {
+  text-align: center;
+  font-size: 2rem;
+  color: #00bfff;
+  margin-bottom: 30px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  padding-left: 0; 
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  background-color: rgba(0, 191, 255, 0.05); 
+  border-radius: 12px;
+  padding: 15px 20px;
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+  background-color: rgba(0, 191, 255, 0.15); 
+}
+
+.timeline-marker {
+  width: 50px;
+  margin-top: 16px;
+  height: 50px;
+  background: #00bfff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.timeline-content h4 {
+  margin: 0;
+  color: #00bfff;
+}
+
+.timeline-content p {
+  margin: 2px 0 0 0;
+  color: #cccccc;
+  font-size: 0.95rem;
+}
+
+.timeline-year {
+  font-weight: 700;
+  margin-right: 10px;
+  color: #aaaaaa;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .about-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .about-image {
+    flex: 1 1 100%;
+  }
+
+  .image-container img {
+    max-width: 100%;
+  }
+
+  .timeline {
+    padding-left: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .stats-container {
+    flex-direction: column;
+    align-items: center;
+    border-top: none;
+    margin-top: 30px;
+    padding-top: 0;
+  }
+
+  .stat-item {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+
+  .stat-item:not(:last-child)::after {
+    display: none;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .about-text h3 {
+    font-size: 1.5rem;
+  }
+
+  .stat-item h3 {
+    font-size: 1.5rem;
+  }
+
+  .timeline-container h3 {
+    font-size: 1.5rem;
+  }
+}

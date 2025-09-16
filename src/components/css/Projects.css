@@ -1,0 +1,141 @@
+.projects {
+  padding: 20px 10%; 
+  background: transparent; 
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  font-weight: 700; 
+  color: #00bfff;
+  text-align: center; 
+  margin-bottom: 40px;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.projects-card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  background: #0F1C2E; 
+  border: 2px solid transparent;
+}
+
+.projects-card:hover {
+  transform: translateY(-8px);
+  border: 2px solid var(--primary-color, #00bfff);
+  box-shadow: 0 8px 25px rgba(0, 191, 255, 0.4);
+}
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.projects-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background: rgba(0, 191, 255, 0.4); 
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-wrapper:hover .projects-overlay {
+  opacity: 1;
+}
+
+.overlay-btn {
+  background: rgb(220, 248, 254);
+  color: #59bedf;
+  border: 2px solid transparent;
+  padding: 8px 14px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.overlay-btn:hover {
+  background: #0ba4dc;
+  color: #f5f5f5;
+}
+
+
+.projects-info {
+  padding: 15px;
+  text-align: center;
+  color: var(--text-light, #fff);
+}
+
+.projects-info h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.justify-text {
+  text-align: justify;
+  text-justify: inter-word;
+} 
+.projects-info p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+.video-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.video-modal {
+  background: #0a3e51;
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 800px;
+  width: 90%;
+  position: relative;
+}
+
+.video-modal video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #315e6e;
+  border: none;
+  border-radius: 50%; 
+  cursor: pointer;
+}
