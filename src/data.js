@@ -8,7 +8,7 @@ export const skills = [
     skills: [
       {
         name: "HTML & CSS",
-        level: 90,
+        level: 100,
         description:
           "Semantic HTML and modern CSS with Flexbox, Grid, animations, and responsive design.",
         experience: "2+ years",
@@ -16,7 +16,7 @@ export const skills = [
       },
       {
         name: "JavaScript",
-        level: 80,
+        level: 90,
         description:
           "ES6+, DOM manipulation, asynchronous programming, and modern patterns.",
         experience: "2+ years",
@@ -24,7 +24,7 @@ export const skills = [
       },
       {
         name: "React.js",
-        level: 75,
+        level: 90,
         description:
           "Functional components, hooks, context API, and state management.",
         experience: "1.5+ years",
@@ -47,7 +47,7 @@ export const skills = [
       },
       {
         name: "MongoDB",
-        level: 65,
+        level: 80,
         description:
           "NoSQL database design, aggregation pipelines, and data modeling.",
         experience: "1.5+ years",
@@ -55,7 +55,7 @@ export const skills = [
       },
       {
         name: "React Native",
-        level: 70,
+        level: 75,
         description:
           "Cross-platform mobile app development with focus on performance and native features.",
         experience: "1+ year",
